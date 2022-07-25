@@ -5,25 +5,34 @@ body {
 
 main {
   background-color: #0b0d33;
+  height: 90vh;
 }
 
 nav {
   background-color: #01021b;
   height: 50px;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
 }
   nav ul {
     list-style: none;
     margin: 0;
     padding-left: 12px;
+    display: flex;
+    flex-direction: row;
   }
   nav ul li a {
     text-decoration: none;
     color: #b5b6d8;
     font-size: 1.5rem;
+    padding-right: 25px;
+    cursor: pointer;
   }
+    nav ul li a:hover{
+      color: aquamarine;
+      font-size: 2rem;
+    }
 
 .title-hello {
   color: aquamarine;
@@ -31,6 +40,33 @@ nav {
   text-align: center;
   margin: 0;
 }
+
+.about {
+  width: 300px;
+  height: 600px;
+  background-color: #202044;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px dotted skyblue;
+}
+  .about p {
+    color: aliceblue;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+.disguise {
+  display: none;
+}
+
+.mulTable {
+  display: flex;
+  color: aquamarine;
+}
+
 
 footer {
   background-color: #01021b;
