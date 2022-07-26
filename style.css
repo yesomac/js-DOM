@@ -1,20 +1,47 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 main {
   background-color: #0b0d33;
-  height: 90vh;
+  /* height: 90vh; */
+  min-height: 90vh;
 }
 
 nav {
   background-color: #01021b;
   height: 50px;
   display: flex;
-  justify-content: center;
+  /* justify-content: center;*/
   align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
+  nav .namePage {
+    color: cadetblue;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+    nav .namePage span {
+      padding-right: 15px;
+      padding-left: 20px;
+    }
+    nav .namePage span:nth-child(2){
+      font-weight: 100;
+      font-size: 1rem;
+      color: azure;
+      text-align: center;
+      justify-content: end;
+    }
+
+  nav .links {
+    display: flex;
+    justify-content: end;
+  }
   nav ul {
     list-style: none;
     margin: 0;
@@ -25,13 +52,14 @@ nav {
   nav ul li a {
     text-decoration: none;
     color: #b5b6d8;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding-right: 25px;
     cursor: pointer;
+    font-weight: 200;
   }
     nav ul li a:hover{
       color: aquamarine;
-      font-size: 2rem;
+      font-size: 1.7rem;
     }
 
 .title-hello {
@@ -62,10 +90,40 @@ nav {
   display: none;
 }
 
+#multiTable {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 15px 15px 15px;
+  justify-content: center;
+}
+
 .mulTable {
   display: flex;
+  flex-direction: column;
   color: aquamarine;
+  width: 300px;
+  height: 600px;
+  background-color: #202044;
+  font-size: 2rem;
+  font-weight: 100;
+  padding: 20px 30px 20px 30px;
+  border-radius: 10px;
+  border: 1px solid slateblue;
+  justify-content: center;
+  align-items: center;
 }
+  .mulTable .titleTable {
+    color: #b5b6d8;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 15px;
+  }
+  .mulTable ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
 
 footer {

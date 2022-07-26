@@ -13,37 +13,32 @@ function helloName() {
   // console.log('hey')
 }
 
-//
+//table multiplication
 function mulTable() {
   let number = prompt('Enter the name to consult')
   let operation = 0
   let result = []
 
-  let dad = document.querySelector('.dad')  
-  const showItemTable = document.createElement('p')
+  let multiplicationTable = document.querySelector('#multiTable')  
   const showTable = document.createElement('div')
-
+  const titleContainer = document.createElement('div')
+  const showItemTableUl = document.createElement('ul')
+  
+  let titleTable = `Tabla de multiplicar del ${number}`
+  titleContainer.append(titleTable)
   for (let i = 1; i < 13; i++){
-    operation = i * number
+    const showItemTableLi = document.createElement('li')
+    operation = number * i
     result.push(operation)
-    // console.log(operation = i * number)
-    // console.log(operation)
-    // console.log(result)
-    // let t = `${number} x ${i}`
-    // showTable.innerText = result + t
-  }
-
-  for (let i = 0; i < result.length; i++) {
-    showItemTable.innerText = number + 'x' + i + '=' + result
-    console.log(`${number} x ${i + 1} = ${result[i]}`)
+    let t = `${number} x ${i} = ${operation}`
+    showItemTableLi.append(t)
+    showItemTableUl.append(showItemTableLi)
   }
 
   showTable.className = 'mulTable'
-  showTable.appendChild(showItemTable)
-  dad.appendChild(showTable)
-  // console.log(operation)
-  // console.log(result)
-  // return result
+  titleContainer.className = 'titleTable'
+  showTable.append(titleContainer, showItemTableUl)
+  multiplicationTable.appendChild(showTable)
 }
 
 //card about
@@ -58,4 +53,6 @@ function showAbout() {
   if (!isShowAbout) {
     showAboutSelect.classList.add('disguise')
   }
+
+  showAboutSelect.classList.toggle('disguise')
 }
