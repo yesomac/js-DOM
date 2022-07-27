@@ -1,3 +1,5 @@
+const dad = document.querySelector('.dad')
+
 function helloName() {
   console.log('hello')
   let yourName = prompt('Enter your name')
@@ -40,6 +42,31 @@ function mulTable() {
   showTable.append(titleContainer, showItemTableUl)
   multiplicationTable.appendChild(showTable)
 }
+
+const select = document.querySelector('#input-text')
+select.addEventListener('click', inputText)
+
+const inputName = document.querySelector('#input-name')
+inputName.addEventListener('click', inputText)
+
+const inputMessage = document.querySelector('#input-message')
+
+const divShowName = document.createElement('div')
+const divShowMessage = document.createElement('div')
+
+// const formContainer = document.createElement('div')
+// const form = document.createElement('form')
+// const formInput = document.createElement('input')
+
+function inputText() {
+  console.log('input')
+  // form.append(formInput)
+
+  console.log(inputName.target)
+}
+// formContainer.append(form)
+// dad.appendChild(formContainer)
+
 
 //card about
 const activeAbout = document.querySelector('#about-nav')

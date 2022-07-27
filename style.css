@@ -125,6 +125,46 @@ nav {
     margin: 0;
   }
 
+  #formContainer {
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    border: 1px solid slateblue;
+    background-color: #202044;
+    display: flex;
+  }
+    #formContainer form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    textarea:focus,
+    input:focus {
+      outline: none;
+    }
+    ::placeholder {
+      color: #b5b6d8;
+      opacity: 0.8;
+    }
+    #formContainer input {
+      background-color: #202044;
+      border: 1px solid slateblue;
+      border-radius: 20px;
+      color: #b5b6d8;
+      font-size: 1rem;
+      padding-left: 10px;
+    }
+    #formContainer input:nth-child(1){
+      width: 200px;
+      height: 30px;
+    }
+    #formContainer input:nth-child(3){
+      width: 300px;
+      height: 100px;
+    }
+
 
 footer {
   background-color: #01021b;
